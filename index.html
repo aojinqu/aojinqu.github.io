@@ -949,6 +949,15 @@
 
 <p>如果clone太慢或网络不好，可以使用镜像站如<a target="_blank" rel="noopener" href="https://githubfast.com/">https://githubfast.com/</a></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js">git clone --branch v5<span class="hljs-number">.1</span><span class="hljs-number">.2</span> <span class="hljs-attr">https</span>:<span class="hljs-comment">//githubfast.com//iissnan/hexo-theme-next themes/next  </span><br></code></pre></td></tr></table></figure>
+
+<h4 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a>上传图片</h4><p>在使用hexo上传图片时，一直遇到问题显示不出来，不缩放时使用markdown语法可以正常展示，但一旦使用html标签来控制缩放就不对了。<br>原因是使用了post_asset_folder插件，这个插件会在创建新的日志时新建文件夹，然后你的图片就只能放在它的文件夹里，就算删掉了文件夹，把图片路径改了，并且在yaml文件里设置了root\，也还是不能直接让所有图片路径基于根路径生成。</p>
+<p>解决这个问题光删掉这个插件还不够，还要删掉hexo-asset-image。</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino">hexo-asset-image<br>作用：这个插件帮助处理文章内的图片路径，尤其是当你使用 post_asset_folder 时。如果你之前使用过并且启用了这个插件，即使关闭了 post_asset_folder，插件仍然可能影响路径生成。<br>解决方案：确认你是否安装并启用了该插件。如果你不再使用 post_asset_folder，可以尝试卸载或禁用它。<br></code></pre></td></tr></table></figure>
+
+<p>删掉之后使用绝对路径就好！<br>在sources文件夹中添加了0908文件夹并放了image-20240905203424773.png，直接按下面这个写：<br><img src="/images/0908/image-20240905203424773.png" alt="i" style="zoom: 67%;" /></p>
+<p>不要用相对路径:<br><img src="../images/0908/image-20240905203424773.png" alt="i" style="zoom: 67%;" /></p>
+<p>(第一种可以在网页上正常显示，但在vscode里索引不到！原因是在yaml里设置了图片路径根据github根目录生成，但这和vscode里的根目录不是同一个)</p>
+
           
         
       
