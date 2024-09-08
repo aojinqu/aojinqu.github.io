@@ -97,27 +97,27 @@
 <meta name="description" content="UnityShader(二)tiling是在该轴上重复的次数，如下图：     在纹理选项中可以选择换行模式，可以自己试试。   repeat和clamp分别效果如下，3D模式最好用repeat     如何将图贴到想要的材质上去？    在reset shader的时候要怎么不让纹理丢失？     打开材质球的debug模式，若将_Tex命名为MainTex是unity内置的基本贴图的变量写法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UnityShader学习记录(二)">
-<meta property="og:url" content="http://example.com/2024/09/08/0908/index.html">
+<meta property="og:url" content="https://aojinqu.github.io/2024/09/08/0908/index.html">
 <meta property="og:site_name" content="凹进去的博客">
 <meta property="og:description" content="UnityShader(二)tiling是在该轴上重复的次数，如下图：     在纹理选项中可以选择换行模式，可以自己试试。   repeat和clamp分别效果如下，3D模式最好用repeat     如何将图贴到想要的材质上去？    在reset shader的时候要怎么不让纹理丢失？     打开材质球的debug模式，若将_Tex命名为MainTex是unity内置的基本贴图的变量写法。">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/.com//image-20240905203424773.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905203511789.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905203541563.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905203724175.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905203823853.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905204953425.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905211722930.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905211758617.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905212742351.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905213512614.png">
-<meta property="og:image" content="http://example.com/.com//image-20240905214311702.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905203424773.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905203511789.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905203541563.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905203724175.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905203823853.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905204953425.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905211722930.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905211758617.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905212742351.png">
+<meta property="og:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905213512614.png">
+<meta property="og:image" content="https://aojinqu.github.io/images/0908/image-20240905214311702.png">
 <meta property="article:published_time" content="2024-09-08T04:26:12.000Z">
-<meta property="article:modified_time" content="2024-09-08T04:54:46.061Z">
+<meta property="article:modified_time" content="2024-09-08T05:26:23.669Z">
 <meta property="article:author" content="aojinqu">
 <meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//image-20240905203424773.png">
+<meta name="twitter:image" content="https://aojinqu.github.io/2024/09/08/images/0908/image-20240905203424773.png">
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2024/09/08/0908/"/>
+  <link rel="canonical" href="https://aojinqu.github.io/2024/09/08/0908/"/>
 
 
 
@@ -279,7 +279,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/08/0908/">
+    <link itemprop="mainEntityOfPage" href="https://aojinqu.github.io/2024/09/08/0908/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -347,36 +347,36 @@
 
       
         <h2 id="UnityShader-二"><a href="#UnityShader-二" class="headerlink" title="UnityShader(二)"></a>UnityShader(二)</h2><p>tiling是在该轴上重复的次数，如下图：</p>
-<img src="/.com//image-20240905203424773.png" alt="image-20240905203424773" style="zoom: 67%;">
+<img src="../images/0908/image-20240905203424773.png" alt="image-20240905203424773" style="zoom: 67%;" />
 
-<img src="/.com//image-20240905203511789.png" alt="image-20240905203511789" style="zoom:50%;">
+<img src="../images/0908/image-20240905203511789.png" alt="image-20240905203511789" style="zoom:50%;" />
 
 <p>在纹理选项中可以选择换行模式，可以自己试试。</p>
-<img src="/.com//image-20240905203541563.png" alt="image-20240905203541563" style="zoom:50%;">
+<img src="../images/0908/image-20240905203541563.png" alt="image-20240905203541563" style="zoom:50%;" />
 
 <p>repeat和clamp分别效果如下，3D模式最好用repeat</p>
-<img src="/.com//image-20240905203724175.png" alt="image-20240905203724175" style="zoom:67%;">
+<img src="../images/0908/image-20240905203724175.png" alt="image-20240905203724175" style="zoom:67%;" />
 
-<img src="/.com//image-20240905203823853.png" alt="image-20240905203823853" style="zoom:67%;">
+<img src="../images/0908/image-20240905203823853.png" alt="image-20240905203823853" style="zoom:67%;" />
 
 <p>如何将图贴到想要的材质上去？</p>
-<img src="/.com//image-20240905204953425.png" alt="image-20240905204953425" style="zoom: 50%;">
+<img src="../images/0908/image-20240905204953425.png" alt="image-20240905204953425" style="zoom: 50%;" />
 
 
 <p>在reset shader的时候要怎么不让纹理丢失？</p>
-<img src="/.com//image-20240905211722930.png" alt="image-20240905211722930" style="zoom:50%;">
+<img src="../images/0908/image-20240905211722930.png" alt="image-20240905211722930" style="zoom:50%;" />
 
-<img src="/.com//image-20240905211758617.png" alt="image-20240905211758617" style="zoom:50%;">
+<img src="../images/0908/image-20240905211758617.png" alt="image-20240905211758617" style="zoom:50%;" />
 
 <p>打开材质球的debug模式，若将_Tex命名为MainTex是unity内置的基本贴图的变量写法。这样在不同shader中变换的时候贴图不会丢失。在后面的编程中作为规范来使用。</p>
-<img src="/.com//image-20240905212742351.png" alt="image-20240905212742351" style="zoom:50%;">
+<img src="../images/0908/image-20240905212742351.png" alt="image-20240905212742351" style="zoom:50%;" />
 
-<img src="/.com//image-20240905213512614.png" alt="image-20240905213512614" style="zoom:67%;">
+<img src="../images/0908/image-20240905213512614.png" alt="image-20240905213512614" style="zoom:67%;" />
 
 <p><strong>将纹理颜色与指定颜色混合</strong></p>
 <p>将颜色属性的值和贴图uv的值相乘，就可以得到下图类似于“中毒的效果”，但由于颜色值在0-1之间，所以无法做到“闪白”的效果。</p>
 <p>闪白和火焰都会增大亮度，所以可以通过加法来实现。</p>
-<p><img src="/.com//image-20240905214311702.png" alt="image-20240905214311702"></p>
+<p><img src="/../images/0908/image-20240905214311702.png" alt="image-20240905214311702"></p>
 <p><strong>使用裁剪片断实现溶解效果</strong></p>
 
       
