@@ -338,36 +338,36 @@
         
           
             <h2 id="UnityShader-二"><a href="#UnityShader-二" class="headerlink" title="UnityShader(二)"></a>UnityShader(二)</h2><p>tiling是在该轴上重复的次数，如下图：</p>
-<img src="/source/images/0908/image-20240905203424773.png" alt="image-20240905203424773" style="zoom: 67%;">
+<img src="/.com//image-20240905203424773.png" alt="image-20240905203424773" style="zoom: 67%;">
 
-<img src="/source/images/0908/image-20240905203511789.png" alt="image-20240905203511789" style="zoom:50%;">
+<img src="/.com//image-20240905203511789.png" alt="image-20240905203511789" style="zoom:50%;">
 
 <p>在纹理选项中可以选择换行模式，可以自己试试。</p>
-<img src="/source/images/0908/image-20240905203541563.png" alt="image-20240905203541563" style="zoom:50%;">
+<img src="/.com//image-20240905203541563.png" alt="image-20240905203541563" style="zoom:50%;">
 
 <p>repeat和clamp分别效果如下，3D模式最好用repeat</p>
-<img src="/source/images/0908/image-20240905203724175.png" alt="image-20240905203724175" style="zoom:67%;">
+<img src="/.com//image-20240905203724175.png" alt="image-20240905203724175" style="zoom:67%;">
 
-<img src="/source/images/0908/image-20240905203823853.png" alt="image-20240905203823853" style="zoom:67%;">
+<img src="/.com//image-20240905203823853.png" alt="image-20240905203823853" style="zoom:67%;">
 
 <p>如何将图贴到想要的材质上去？</p>
-<img src="/source/images/0908/image-20240905204953425.png" alt="image-20240905204953425" style="zoom: 50%;">
+<img src="/.com//image-20240905204953425.png" alt="image-20240905204953425" style="zoom: 50%;">
 
 
 <p>在reset shader的时候要怎么不让纹理丢失？</p>
-<img src="/source/images/0908/image-20240905211722930.png" alt="image-20240905211722930" style="zoom:50%;">
+<img src="/.com//image-20240905211722930.png" alt="image-20240905211722930" style="zoom:50%;">
 
-<img src="/source/images/0908/image-20240905211758617.png" alt="image-20240905211758617" style="zoom:50%;">
+<img src="/.com//image-20240905211758617.png" alt="image-20240905211758617" style="zoom:50%;">
 
 <p>打开材质球的debug模式，若将_Tex命名为MainTex是unity内置的基本贴图的变量写法。这样在不同shader中变换的时候贴图不会丢失。在后面的编程中作为规范来使用。</p>
-<img src="/source/images/0908/image-20240905212742351.png" alt="image-20240905212742351" style="zoom:50%;">
+<img src="/.com//image-20240905212742351.png" alt="image-20240905212742351" style="zoom:50%;">
 
-<img src="/source/images/0908/image-20240905213512614.png" alt="image-20240905213512614" style="zoom:67%;">
+<img src="/.com//image-20240905213512614.png" alt="image-20240905213512614" style="zoom:67%;">
 
 <p><strong>将纹理颜色与指定颜色混合</strong></p>
 <p>将颜色属性的值和贴图uv的值相乘，就可以得到下图类似于“中毒的效果”，但由于颜色值在0-1之间，所以无法做到“闪白”的效果。</p>
 <p>闪白和火焰都会增大亮度，所以可以通过加法来实现。</p>
-<p><img src="/source/images/0908/image-20240905214311702.png" alt="image-20240905214311702"></p>
+<p><img src="/.com//image-20240905214311702.png" alt="image-20240905214311702"></p>
 <p><strong>使用裁剪片断实现溶解效果</strong></p>
 
           
@@ -488,9 +488,9 @@
       
         
           
-            <h3 id="Unityshader概览"><a href="#Unityshader概览" class="headerlink" title="Unityshader概览"></a>Unityshader概览</h3><p>在not supported（暂时）中可以找到自己写的shader<br><img src="/source/images/0905/%E6%9D%90%E8%B4%A8.png" alt="材质"></p>
-<p><img src="/source/images/0905/shader.png" alt="shader"></p>
-<p>作业7 顶点属性可视化<br><img src="/source/images/0905/assignment7.png?50" alt="图表1"></p>
+            <h3 id="Unityshader概览"><a href="#Unityshader概览" class="headerlink" title="Unityshader概览"></a>Unityshader概览</h3><p>在not supported（暂时）中可以找到自己写的shader<br><img src="/.com//%E6%9D%90%E8%B4%A8.png" alt="材质"></p>
+<p><img src="/.com//shader.png" alt="shader"></p>
+<p>作业7 顶点属性可视化<br><img src="/.com//assignment7.png?50" alt="图表1"></p>
 <h5 id="1-模型的本地坐标"><a href="#1-模型的本地坐标" class="headerlink" title="1.模型的本地坐标"></a>1.模型的本地坐标</h5><p>步骤1：获取模型坐标，不用把模型空间转换到裁剪空间的坐标。</p>
 <p>在v2f中定义VertexPos作为模型坐标，v2f中定义的变量一定要有语义，TEXCOORD也不只能用于纹理，所以这里借TEXCOORD0来定义。</p>
 <pre><code>                float3 VertexPos:TEXCOORD0;
@@ -498,7 +498,7 @@
 <p>步骤2：把三维的模型坐标做成四维从片段着色器输出。</p>
 <pre><code>            return float4(i.VertexPos.xyz,1.0)
 </code></pre>
-<p><img src="/source/images/0905/as7-1.png" alt="as7-1"></p>
+<p><img src="/.com//as7-1.png" alt="as7-1"></p>
 <figure class="highlight glsl"><table><tr><td class="code"><pre><code class="hljs glsl">Shader &quot;aj7/Framework&quot;  <span class="hljs-comment">// 定义shader名字</span><br>&#123;<br>    Properties<br>    &#123;<br>        _Color(&quot;Color&quot;,Color)=(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>) <br>        _Value(&quot;Intensity&quot;,<span class="hljs-type">float</span>)=<span class="hljs-number">1</span><br>    &#125;<br>    SubShader <span class="hljs-comment">//一个shader中有多个subshader，系统会一个个往下遍历找，不支持的会跳过</span><br>    &#123;<br>        pass <span class="hljs-comment">//一个pass就是一次渲染，每个shader都要有一个pass块</span><br>        &#123;<br>            CGPROGRAM<br><br>            <span class="hljs-meta">#pragma vertex vert //编译指令，连接顶点和片段着色器</span><br>            <span class="hljs-meta">#pragma fragment frag</span><br>            <span class="hljs-meta">#include &quot;UnityCG.cginc&quot;</span><br><br>            float4 _Color;      <span class="hljs-comment">//声明必须和属性名一样，不然对应不上</span><br>            <span class="hljs-type">float</span> _Value;<br>            <br>            struct appdata  <span class="hljs-comment">//约定叫appdata结构体</span><br>            &#123;<br>                float4 vertex:POSITION;<br>                float4 color:COLOR0;    <span class="hljs-comment">//direct3D中用0</span><br>            &#125;;<br><br>            struct v2f <br>            &#123;<br>                float4 pos:SV_POSITION;<br>                float3 VertexPos:TEXCOORD0;<br>            &#125;;<br><br>            v2f vert(appdata v)<span class="hljs-comment">//顶点着色器</span><br>            &#123;<br>                v2f o=(v2f)<span class="hljs-number">0</span>; <span class="hljs-comment">//定义需要初始化，不然容易报错 ;注意是定义部分加括号</span><br>                o.pos=UnityObjectToClipPos(v.vertex);  <span class="hljs-comment">//顶点着色器中必做这步，把模型空间转换到裁剪空间</span><br>                o.VertexPos=v.vertex.xyz;<br>                <span class="hljs-keyword">return</span> o;<br>            &#125;<br>            float4 frag(v2f i):SV_Target <span class="hljs-comment">//sv_t是输入到屏幕的颜色</span><br>            &#123;<br>                float4 tmp=float4(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>);<br>                tmp=float4(i.VertexPos,<span class="hljs-number">1.0</span>);<br>                <span class="hljs-keyword">return</span> tmp;<br>            &#125;<br>            ENDCG<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//CustomEditor &quot;&quot;//自定义修改器</span><br>    <span class="hljs-comment">//Fallback &quot;&quot;//备胎，适用于subshader都不支持的情况</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p><strong>2.模型的UV信息</strong></p>
